@@ -1,0 +1,141 @@
+<%- include('partials/header') %>
+
+    <div class="row">
+      <div class="PageTitle">
+        <h2>Dashboard</h2>
+      </div>
+    </div>
+
+
+<!-- Cards -->
+    <div class="row">
+      <!-------------------------------------- Low Availability -->
+        <div class="cards1 col-lg-4 col-sm-12 shadow p-3 mb-5 bg-white card_custom">
+          <div class="card border-0">
+            <div class="card-header" id="header_custom">
+              <h2>Low Availability</h2>
+            </div>
+            <div class="card-body card_custom">
+              <a id=undrline href="low_availability">
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="value" data-t="s" data-v="Item ID" id="sjs-A1" scope="col">Item ID </th>
+                      <th class="value" data-t="s" data-v="Current Balance" id="sjs-B1" scope="col">Current Balance</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% availList.forEach(lowavailabilities => {%>
+                        <tr>
+                            <td class="" scope="row"><%= lowavailabilities.itemID %></td>
+                            <td class="" style="text-align:center"><%= lowavailabilities.currBalance %></td>
+                        </tr>
+                    <%})%>
+                  </tbody>
+                </table>
+
+              </a>
+            </div>
+          </div>
+        </div>
+
+<!-- -----------------------------------------------Aging Part -->
+      <div class="cards2 col-lg-4 col-sm-12 shadow p-3 mb-5 bg-white card_custom">
+        <div class="card border-0">
+          <div class="card-header" id="header_custom">
+            <h2>Aging Part</h2>
+          </div>
+          <div class="card-body card_custom">
+            <a id= undrline href="aging">
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="" scope="col">Item ID </th>
+                    <th class="" scope="col">Current Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% ageList.forEach(ages => {%>
+                      <tr>
+                          <td class="" scope="row"><%= ages.itemID %></td>
+                          <td class="" style="text-align:center"><%= ages.currBalance %></td>
+                      </tr>
+                  <%})%>
+                </tbody>
+              </table>
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+<!-- ----------------------------------------------Freqently used -->
+      <div class="cards1 col-lg-4 col-sm-12 shadow p-3 mb-5 bg-white card_custom">
+        <div class="card border-0">
+          <div class="card-header" id="header_custom">
+            <h2>Freqently used</h2>
+          </div>
+          <div class="card-body card_custom">
+            <a id= undrline href="Frequently">
+
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Item ID </th>
+                    <th scope="col">Average Use/Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% frequencyList.forEach(frequencies => {%>
+                      <tr>
+                          <td class="" scope="row"><%= frequencies.itemID %></td>
+                          <td class="" style="text-align:center"><%= frequencies.averageUsePerYear %></td>
+                      </tr>
+                  <%})%>
+                </tbody>
+              </table>
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+<!---------------------------------------------- Out of Stock -->
+      <div class="cards2 col-lg-4 col-sm-12 shadow p-3 mb-5 bg-white card_custom">
+        <div class="card border-0">
+          <div class="card-header" id="header_custom">
+            <h2>Out of Stock</h2>
+          </div>
+          <div class="card-body card_custom">
+            <a id= "undrline" href="OutOfStock">
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="" scope="col">Item ID </th>
+                    <th class="" scope="col">Current Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% stockList.forEach(stocks => {%>
+                      <tr>
+                          <td scope="row"><%= stocks.itemID %></td>
+                          <td style="text-align:center"><%= stocks.currBalance %></td>
+                      </tr>
+                  <%})%>
+                </tbody>
+              </table>
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+<%- include('partials/footer') %>

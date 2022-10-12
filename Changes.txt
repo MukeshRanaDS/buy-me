@@ -1,0 +1,5 @@
+auditLogs     =   about
+analytics     =   achievements
+dashboard     =   downloads
+partsManager  =   career
+partsMovement =   contact

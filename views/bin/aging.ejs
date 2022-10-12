@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+    <div class="row">
+      <div class="PageTitle">
+        <h2>Aging</h2>
+      </div>
+    </div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Item ID </th>
+            <th scope="col">Item Name and Specification</th>
+            <th scope="col">Current Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ageList.forEach(ages => {%>
+            <tr>
+              <td scope="row"><%= ages.itemID %></td>
+              <td><%= ages.itemName %></td>
+              <td style="text-align:center"><%= ages.currBalance %></td>
+            </tr>
+            <%})%>
+          </tbody>
+        </table>
+
+        <%- include('partials/footer') %>

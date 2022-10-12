@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+
+    <div class="row">
+      <div class="PageTitle">
+        <h2>Out Of Stock</h2>
+      </div>
+    </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Item ID </th>
+            <th scope="col">Item Name and Specification</th>
+            <th scope="col">Current Balance</th>
+            <th scope="col">Average Usage/Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% stockList.forEach(stocks => {%>
+              <tr>
+                  <td><%= stocks.itemID %></td>
+                  <td><%= stocks.itemName %></td>
+                  <td style="text-align:center"><%= stocks.currBalance %></td>
+                  <td style="text-align:center"><%= stocks.averageUsePerYear %></td>
+              </tr>
+          <%})%>
+        </tbody>
+      </table>
+
+<%- include('partials/footer') %>

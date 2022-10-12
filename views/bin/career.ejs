@@ -1,0 +1,174 @@
+<%- include('partials/header') %>
+<!-- Title Bar -->
+<div class="row">
+  <div class="PageTitle">
+    <h2>Part Manager</h2>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------ -->
+ <!-- Calender Row -->
+ <div class="row">
+    <div>
+      <form action="" method="post">
+        <div>
+          <div class="form-group">
+            <label for="name" id="searchrslt" class="control-label cal-bar">Start Date :</label>
+            <input type="date" id="searchrslt" class="control-label" placeholder="Search.." name="fltrIDD">
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+            <label for="name" id="searchrslt" class="control-label cal-bar">End Date :</label>
+            <input type="date" id="searchrslt" class="control-label" placeholder="Search.." name="fltrIDD">
+            <button type="submit"><i class="fa fa-search"></i></button>
+
+            <label for="name" id="searchrslt" class="control-label cal-bar">Vendor :</label>
+            <input type="date" id="searchrslt" class="control-label" placeholder="Search.." name="fltrIDD">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+   </div>
+ </div>
+
+ <!-- -------------------- Columns 1 --------------------------- -->
+ <!-- Search bar -->
+<div class="container">
+  <div class="column1" >
+
+    <div class='searchTag'>
+      <div class="col-md-12">
+        <form action="/search" method="post">
+          <div>
+            <div class="form-group">
+              <label>Filter :</label>
+              <input class="col-md-9" type="text" name="filterid" value="" placeholder="Part ID..">
+              <button type="submit" name=""><i class="fa fa-search"></i></button>
+              <!-- <label for="name" id="searchrslt" class="control-label">Filter :</label>
+              <input type="text" id="searchrslt" class="col-md-9 control-label" placeholder="Part ID.." name="fltrID">
+              <button type="submit"><i class="fa fa-search"></i></button> -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<!-- Table Search Reasult -->
+    <table class="col-md-12">
+      <thead>
+        <tr>
+          <th style="text-align:center"> Part Name </th>
+          <th style="width: 20% ">Current Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (searchList.length >0){ %>
+        <% searchList.forEach(function(row){ %>
+        <tr>
+          <td ><%= row.itemName %></td>
+          <td style="text-align:center"><%= row.currBalance %></td>
+        </tr>
+        <% })} else{ %>
+        <tr>
+          <td >No Record Found</td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- -------------------- Columns 2 --------------------------- -->
+  <!-- Add New Record card-->
+  <div class="column2" >
+    <div class=" col-md-12">
+      <div class="">
+        <div class="title-row">
+          <h3>Add New record</h3>
+        </div>
+        <form action="/" method="post">
+          <div class="form-group">
+            <div class="column">
+              <div class="row ">
+                <!-- Part ID -->
+                <label class="col-lg-4 searchTag" for="itemID">Part ID : </label>
+                <input class="col-lg-8 searchTag" type="text" class="form-control" id="itemID" name="itemID" placeholder="Enter Part ID"><br><br>
+                <!-- Part Name -->
+                <label class="col-lg-4 searchTag" for="partName">Part Name : </label>
+                <input class="col-lg-8 searchTag" type="text" class="form-control" id="partName" name="partName" placeholder="Enter Part Name"><br><br>
+                <!-- Record Date -->
+                <label class="col-lg-4 searchTag" for="Date">Record Date : </label>
+                <input class="col-lg-8" type="date" value="01-01-2000" class="form-control" placeholder="" name="timestamp">
+              </div>
+              <script>
+                function setInputDate(_id){
+                var _dat = document.querySelector(_id);
+                var hoy = new Date(),
+                    d = hoy.getDate(),
+                    m = hoy.getMonth()+1,
+                    y = hoy.getFullYear(),
+                    data;
+                if(d < 10){
+                    d = "0"+d;
+                };
+                if(m < 10){
+                    m = "0"+m;
+                };
+                data = d+"-"+m+"-"+y;
+                console.log(data);
+                _dat.value = data;
+                };
+                setInputDate("#myDate");
+              </script>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="column">
+              <div class="row">
+                <!-- Manufacutrer Name -->
+                <label class="col-lg-4 searchTag" for="manufacturerName">Vendor : </label>
+                <input class="col-lg-8 searchTag" type="text" class="form-control" id="manufacturerName" name="manuName" placeholder="Enter Manufacturer Name" name="manufacturerName"><br><br>
+                <!-- Quantity -->
+                <label class="col-lg-4 searchTag" for="quantity">Quantity : </label>
+                <input class="col-lg-8 searchTag" type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity"><br><br>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="submit-btn btn-primary">
+        </form>
+      </div>
+    </div>
+
+<!-- Complete Table Result -->
+    <table class="table-result sortable" style="width:100%">
+      <thead>
+        <tr>
+          <th style="width: 17% ">Date</th>
+          <th style="width: 15%">Part ID </th>
+          <th style="width: 25%">Part Name </th>
+          <th style="width: 25%">Part Manufacturer </th>
+          <th style="width: 8%">Current Balance</th>
+          <th style="width: 10%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% completeTableList.forEach(function(row){ %>
+          <tr>
+            <td style="text-align:center"><%= String(row.timestamp).slice(4,15) %></td>
+            <td><%= row.itemID %></td>
+            <td><%= row.itemName %></td>
+            <td><%= row.itemManufacturer %></td>
+            <td style="text-align:center"><%= row.currBalance %></td>
+            <td style="text-align:center">
+              <a class="btn " href="/edit<%= row._id %>"><i class="fa fa-edit"></i></a>
+              <a class="btn " href="/delete<%= row._id %>"><i class="fa fa-trash"></i></a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- --------------------------------------------------------------------- -->
+
+<%- include('partials/footer') %>

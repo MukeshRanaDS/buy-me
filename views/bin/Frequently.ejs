@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+    <div class="row">
+      <div class="PageTitle">
+        <h2>Frequency of Usage</h2>
+      </div>
+    </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Item ID </th>
+            <th scope="col">Item Name and Specification</th>
+            <th scope="col">Average Use/Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% frequencyList.forEach(frequencies => {%>
+              <tr>
+                  <td><%= frequencies.itemID %></td>
+                  <td><%= frequencies.itemName %></td>
+                  <td style="text-align:center"><%= frequencies.averageUsePerYear %></td>
+              </tr>
+          <%})%>
+        </tbody>
+      </table>
+
+
+
+
+
+<%- include('partials/footer') %>

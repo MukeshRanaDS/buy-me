@@ -1,0 +1,107 @@
+<%- include('partials/header') %>
+<section class='career'>
+  <!-- -------------------------------------- Career Banner ---------------- -->
+  <div class="careerpagebanner">
+    <h1 class="ml15">
+      <span class="word">Search</span>
+      <span class="word">Learn</span>
+      <span class="word">&</span>
+      <span class="word">Implement</span>
+    </h1>
+  </div>
+<script>
+  anime.timeline({
+      loop: true
+    })
+    .add({
+      targets: '.ml15 .word',
+      scale: [14, 1],
+      opacity: [0, 1],
+      easing: "easeOutCirc",
+      duration: 800,
+      delay: (el, i) => 800 * i
+    }).add({
+      targets: '.ml15',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+</script>
+
+<!-- ----------------------------------------------------------------------- -->
+<div class="careerpage">
+  <hr style="height:2px;border-width:0;background-color:black; width:100%">
+  <!-- ----------------------------- EmageSoft ----------------------------- -->
+  <div class="emage">
+    <h2>Data Science</h2>
+    <div class="column col-8">
+      <p class="blog-letter">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+    <div class="column col-4">
+      <img class="emage-img" src="files/Emage.png" alt="second-img">
+    </div>
+  </div>
+  <hr style="height:1px;border-width:0;background-color:black; width:30%">
+
+  <!-- ----------------------------- IIITB --------------------------------- -->
+  <div class="iiitb">
+    <h2>PGC in Data Science(Business Analysis)</h2>
+    <div class="column col-4">
+      <img class="iiitb-img" src="files/IIITB.png" alt="first-img">
+    </div>
+    <div class="column col-8">
+      <p class="blog-letter">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+  </div>
+  <hr style="height:1px;border-width:0;background-color:black; width:30%">
+
+  <!-- ----------------------------- Bachelor ------------------------------ -->
+  <div class="bachelor">
+    <h2>Bachelor in Engineering (EE)</h2>
+    <div class="column col-8">
+      <p class="blog-letter">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+    <div class="column col-4">
+      <img class="rtmnu-img" src="files/RTMNU.jpeg" alt="second-img">
+    </div>
+  </div>
+  <hr style="height:1px;border-width:0;background-color:black; width:30%">
+
+  <!-- ----------------------------- Diploma ------------------------------- -->
+  <div class="diploma">
+    <h2>Diploma (EE)</h2>
+    <div class="column col-4">
+      <img class="msbte-img" src="files/Msbte.png" alt="second-img">
+    </div>
+    <div class="column col-8">
+      <p class="blog-letter">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+  </div>
+  <hr style="height:1px;border-width:0;background-color:black; width:30%">
+
+  <!-- ----------------------------- School -------------------------------- -->
+  <div class="school">
+    <h2>Schooling</h2>
+    <div class="column col-8">
+      <p class="blog-letter">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+    </div>
+    <div class="column col-4">
+      <img class="ssc-img" src="files/SSC.jpg" alt="second-img">
+    </div>
+  </div>
+</div>
+
+</section>
+
+<%- include('partials/footer') %>
