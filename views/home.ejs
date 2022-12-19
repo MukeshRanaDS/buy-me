@@ -1,45 +1,50 @@
 <%- include('partials/header') %>
 
-<!--=------------------------------ Source  ----------------------------------->
-<!-- https://alvarotrigo.com/blog/css-text-animations/ -->
+<!--=------------------------------ Banner  ----------------------------------->
 <section class="banner-section">
-  <div class="banner" style>
+  <div class="banner">
     <div class="banner-title">
-      <h1 class="type1">Muqesh!!</h1>
-      <h3><span class="type">Data Scientist</span></h3>
-      <h6><span class="type"style="--n:20">Hire me if you can!</span></h6>
+      <h1 class="name">Muqesh...</h1>
+      <h3 class="position"><span>Data Scientist</span></h3>
+      <h6 class="challenge"><span class="type"style="--n:20">Hire me if you can!</span></h6>
     </div>
   </div>
 </section>
 
 <!-------------------------------------- Profile ------------------------------>
 <section class="profile-section" id="features">
-    <div class="profile">
-    <p class="tab1"><span class="tab1"></span>What is Lorem Ipsum?
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    <p class="tab1"><span class="tab1"></span> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-    book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-    . It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-      recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <div class="profile">
+    <div class="profile-text">
+      <p>What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        <br><br>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        . It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </div>
   </div>
 </section>
 
 <!-------------------------------------- Blogs -------------------------------->
-<section class="blogs">
+<section class="blog-section">
   <div id="testimonial-carousel" class="carousel slide" data-ride="false">
     <div class="carousel-inner ">
       <!-- -------------------------------------- -->
       <div class="carousel-item active blog-fluid">
         <div class="column col-8">
           <h2 class='blog-heading'>Cooking</h2>
-          <p class="blog-letter">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
+          <div class="blog-letter">
+            <p >
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum is simply dummy y.
+            </p>  
+          </div>
         </div>
         <div class="column col-4">
-          <img class="blog1-img" src="images/blog1.jpg" alt="blog1-img">
+          <img class="blog1-img" src="images/work.jpg" alt="blog1-img">
         </div>
       </div>
       <!-- -------------------------------------- -->
@@ -49,11 +54,11 @@
           <p class="blog-letter">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
+            Lorem Ipsum is simply dummy y.
+        </p>
         </div>
         <div class="column col-4">
-          <img class="blog1-img" src="images/blog1.jpg" alt="blog1-img">
+          <img class="blog2-img" src="images/work.jpg" alt="blog3-img">
         </div>
       </div>
       <!-- -------------------------------------- -->
@@ -63,11 +68,11 @@
           <p class="blog-letter">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
+            Lorem Ipsum is simply dummy y.
+        </p>
         </div>
         <div class="column col-4">
-          <img class="blog1-img" src="images/blog1.jpg" alt="blog1-img">
+          <img class="blog3-img" src="images/work.jpg" alt="blog3-img">
         </div>
       </div>
       <!-- --------------------------------------- -->
@@ -87,29 +92,46 @@
 </section>
 
 <!--------------------------------- Youtube Updates --------------------------->
-<section class="youtube-section" id="pricing">
-  <div class="row">
-    <iframe class='youtube' height="300" width=30% src="https://www.youtube.com/embed/il_t1WVLNxk">
-    </iframe>
-    <iframe class='youtube' height="300" width=30% src="https://www.youtube.com/embed/il_t1WVLNxk">
-    </iframe>
-    <iframe class='youtube' height="300" width=30% src="https://www.youtube.com/embed/il_t1WVLNxk">
-    </iframe>
-  </div>
-  <div class="landing">
-    <a href="https://www.youtube.com/channel/UCbrgKz68f3NvLr7p3Oiw9nA">
-      <button class='landingButton btn-lg'type="submit" href="https://www.youtube.com/channel/UCbrgKz68f3NvLr7p3Oiw9nA" name="button">Land to me</button>
-    </a>
+<section class="youtube-section">
+  <div class="flexbox">
+    <div class="flexcard flexcardGreen">
+      <div class="flex flexcardTitle">
+        Title
+      </div>
+      <div class="flex">
+        <iframe class='youtube col-sm-4 col-md-12' height="200" width=90% src="https://www.youtube.com/embed/il_t1WVLNxk"></iframe>        
+      </div>
+      <div class="flex flexcardImg">
+      </div>
+    </div>
+    <div class="flexcard flexcardGreen">
+      <div class="flex flexcardTitle">
+        Title
+      </div>
+      <div class="flex">
+        <iframe class='youtube col-sm-4 col-md-12' height="200" width=90% src="https://www.youtube.com/embed/il_t1WVLNxk"></iframe>        
+      </div>
+    </div>
+    <div class="flexcard flexcardGreen">
+      <div class="flex flexcardTitle">
+        Title
+      </div>
+      <div class="flex">
+        <iframe class='youtube col-sm-4 col-md-12' height="200" width=90% src="https://www.youtube.com/embed/il_t1WVLNxk"></iframe>        
+      </div>
+      <div class="flex flexcardImg">
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Call of Duty -->
-<section class="calltoaction-section" id="cta">
+<!-------------------------------- Call of Duty ------------------------------->
+<!-- <section class="callOfDuty-section" id="cta">
   <div class="contact-form">
     <form method="post">
       <h3>Drop Us a Message</h3>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12a">
           <div class="form-group">
             <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
           </div>
@@ -131,6 +153,82 @@
       </div>
     </form>
   </div>
+</section> -->
+<!-- ---------------------------------------------- -->
+<section class="callOfDuty-section">
+  <div class="contain">
+    <div class="wrapper">
+      <div class="form">
+        <h6 class="getInTouch">GET IN TOUCH</h6>
+        <h6 class="form-headline">Send us a message</h6>
+        <form id="submit-form" action="">
+          <p>
+            <input id="name" class="form-input" type="text" placeholder="Your Name*">
+            <small class="name-error"></small>
+          </p>
+          <p> 
+          <p class="full-width">
+            <textarea  minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+            <small></small>
+          </p>
+          <p class="full-width">
+            <input type="submit" class="submit-btn" value="Submit" onclick="checkValidations()">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- ------------------------------------ -->
+  <script>
+    const nameEl = document.querySelector("#name");
+    const emailEl = document.querySelector("#email");
+    const companyNameEl = document.querySelector("#company-name");
+    const messageEl = document.querySelector("#message");
+
+    const form = document.querySelector("#submit-form");
+
+    function checkValidations() {
+      let letters = /^[a-zA-Z\s]*$/;
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const companyName = companyNameEl.value.trim();
+      const message = messageEl.value.trim();
+      if (name === "") {
+        document.querySelector(".name-error").classList.add("error");
+          document.querySelector(".name-error").innerText =
+            "Please fill out this field!";
+      } else {
+        if (!letters.test(name)) {
+          document.querySelector(".name-error").classList.add("error");
+          document.querySelector(".name-error").innerText =
+            "Please enter only characters!";
+        } else {
+    
+        }
+      }
+      if (email === "") {
+        document.querySelector(".name-error").classList.add("error");
+          document.querySelector(".name-error").innerText =
+            "Please fill out this field!";
+      } else {
+        if (!letters.test(name)) {
+          document.querySelector(".name-error").classList.add("error");
+          document.querySelector(".name-error").innerText =
+            "Please enter only characters!";
+        } else {
+          
+        }
+      }
+    }
+
+    function reset() {
+      nameEl = "";
+      emailEl = "";
+      companyNameEl = "";
+      messageEl = "";
+      document.querySelector(".name-error").innerText = "";
+    }
+  </script>
 </section>
 
 <%- include('partials/footer') %>
